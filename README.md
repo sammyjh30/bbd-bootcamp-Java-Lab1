@@ -107,7 +107,11 @@ public void testSmallchar() {
 
 ```
 
-Continue until the final solution (with RegEx).
+Continue until the final solution
+
+- Solution can use Regex to check for 4 characters in a row
+- Test case should make use of  JUnit 5 features - CsvSource, ParameterizedTest and assertThrows
+- JUnit 5 samples are located at https://github.com/junit-team/junit5/tree/master/documentation/src/test/java/example
 
 # 
 
