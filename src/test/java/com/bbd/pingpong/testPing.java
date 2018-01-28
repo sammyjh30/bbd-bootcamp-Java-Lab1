@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AppTest {
+public class testPing {
     @DisplayName("Valid roman numeral")
     @ParameterizedTest(name = "\"{0}\" should be {1}")
     @CsvSource({
