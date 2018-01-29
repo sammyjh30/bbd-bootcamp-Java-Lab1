@@ -131,7 +131,7 @@ Continue until the final solution
 
  
 
-**Roman numerals**** follow this pattern….****   **
+Roman numerals follow this pattern:
 
 | **Units**     | **I** | **II** | **III** | **IV** | **V** | **VI** | **VII** | **VIII** | **IX** |
 | ------------- | ----- | ------ | ------- | ------ | ----- | ------ | ------- | -------- | ------ |
