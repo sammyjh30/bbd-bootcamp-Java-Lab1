@@ -65,7 +65,7 @@ Player 2:
 public class RomanConverter {
     public static int Convert(String s) 
     {
-        if (s.equals("V") {
+        if (s.equals("V")){
             return 5;
         }
         else {
@@ -97,12 +97,13 @@ public class RomanConverter {
             }
         }
     return sum;
+   }
 }
 
 
 @Test
 public void testSmallchar() {
-    assertEquals(6,RomanConverter.Convert("vi");
+    assertEquals(6,RomanConverter.Convert("vi"));
 }
 
 ```
