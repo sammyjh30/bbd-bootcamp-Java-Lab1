@@ -17,6 +17,22 @@ public class TestPing {
     }
 
     @Test
+    public void throwIllegalArgumentExceptionWhenInputIsEmpty() {
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    RomanConverter.convert("");
+                });
+    }
+
+    @Test
+    public void throwIllegalArgumentExceptionWhenInputIsNull() {
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    RomanConverter.convert(null);
+                });
+    }
+
+    @Test
     public void throwIllegalArgumentExceptionWhenInputNotInOrderWithIL() {
         assertThrows(IllegalArgumentException.class,
                 () -> {

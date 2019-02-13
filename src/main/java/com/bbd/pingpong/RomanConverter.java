@@ -17,8 +17,11 @@ public class RomanConverter {
         numerals.put("C", 100);
         numerals.put("D", 500);
         numerals.put("M", 1000);
-
+        if (s == null || s.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
         s = s.toUpperCase();
+
 
         if (!s.matches("[IVXLCDM]+")) {
             throw new IllegalArgumentException();
