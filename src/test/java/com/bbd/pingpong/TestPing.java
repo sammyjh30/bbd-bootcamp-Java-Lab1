@@ -25,6 +25,22 @@ public class TestPing {
     }
 
     @Test
+    public void throwIllegalArgumentExceptionWhenDuplicateSubration() {
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    RomanConverter.convert("XIXIX");
+                });
+    }
+
+    @Test
+    public void throwIllegalArgumentExceptionWhenDuplicateSubrationXIXCX() {
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    RomanConverter.convert("XIXCX");
+                });
+    }
+
+    @Test
     public void throwIllegalArgumentExceptionWhenInputIsNull() {
         assertThrows(IllegalArgumentException.class,
                 () -> {

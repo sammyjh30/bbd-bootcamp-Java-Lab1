@@ -29,18 +29,25 @@ public class RomanConverter {
         String letter = "";
         String nextLetter = "";
         for (int i = 0; i < s.length(); i++) {
+
             letter = "";
             letter += s.charAt(i);
             if (i + 1 < s.length()) {
                 nextLetter = "";
                 nextLetter += s.charAt(i + 1);
             }
-            if ( i + 3 < s.length()){
-                if ( !letter.equals("M") && s.charAt(i) == s.charAt(i + 1) && s.charAt(i) == s.charAt(i + 2) && s.charAt(i) == s.charAt(i + 3))
+            if (i + 3 < s.length()) {
+                if (!letter.equals("M") && s.charAt(i) == s.charAt(i + 1) && s.charAt(i) == s.charAt(i + 2) && s.charAt(i) == s.charAt(i + 3))
                     throw new IllegalArgumentException();
             }
 
             if (nextLetter.length() > 0 && numerals.get(letter) < numerals.get(nextLetter)) {
+                if (i + 2 < s.length() && numerals.get(Character.toString(s.charAt(i))) <= numerals.get(Character.toString(s.charAt(i + 2)))) {
+                    throw new IllegalArgumentException();
+                }
+                if (i + 3 < s.length() && numerals.get(Character.toString(s.charAt(i + 1))) <= numerals.get(Character.toString(s.charAt(i + 3)))) {
+                    throw new IllegalArgumentException();
+                }
                 if (letter.equals("I") && !nextLetter.equals("V") && !nextLetter.equals("X")) {
                     throw new IllegalArgumentException();
                 } else if (letter.equals("V") || letter.equals("L") || letter.equals("D")) {
@@ -49,8 +56,7 @@ public class RomanConverter {
                     throw new IllegalArgumentException();
                 } else if (letter.equals("C") && !nextLetter.equals("D") && !nextLetter.equals("M")) {
                     throw new IllegalArgumentException();
-                }
-                else {
+                } else {
                     ret = ret + (numerals.get(nextLetter) - numerals.get(letter));
                     i++;
                 }
